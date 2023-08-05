@@ -18,8 +18,8 @@ public class EmployeeService {
     public EmployeeService() {
         this.employees = new HashMap<>();
     }
-    public Employee addEmployee(String firstName, String lastName) {
-        Employee employee = new Employee(firstName, lastName);
+    public Employee addEmployee(String firstName, String lastName, int department, double salary) {
+        Employee employee = new Employee(firstName, lastName, department,salary);
         String key = getKey(firstName,lastName);
         if (employees.containsKey(key)) {
             throw new EmployeeAlreadyAddedException();
